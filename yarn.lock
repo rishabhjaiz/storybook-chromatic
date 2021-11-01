@@ -5636,7 +5636,7 @@ chownr@^2.0.0:
 
 chromatic@^6.0.5:
   version "6.0.5"
-  resolved "https://registry.npmjs.org/chromatic/-/chromatic-6.0.5.tgz"
+  resolved "https://registry.yarnpkg.com/chromatic/-/chromatic-6.0.5.tgz#fa5612bcf498ebb3dc6bbdd633b16ad9c53ed3d3"
   integrity sha512-jYoU9WOLX8hx6oRWYgr2aH1O46BpWMdBIZvON7SgUTxh9fFpsQqQ9dp2tvowwpsw/d73DGYnpX0+h/St78+kXg==
 
 chrome-trace-event@^1.0.2:
