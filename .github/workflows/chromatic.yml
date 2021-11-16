@@ -4,22 +4,13 @@
 name: 'Chromatic'
 
 # Event for the workflow
-on:
-  push:
-    paths:
-      - web/**
-  pull_request:
-    paths:
-      - web/**
+on: push
 
 # List of jobs
 jobs:
   chromatic-deployment:
     # Operating System
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: web
     # Job steps
     steps:
       - uses: actions/checkout@v1
@@ -30,7 +21,6 @@ jobs:
         uses: chromaui/action@v1
         # Chromatic GitHub Action options
         with:
-          workingDir: web
           token: ${{ secrets.GITHUB_TOKEN }}
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
