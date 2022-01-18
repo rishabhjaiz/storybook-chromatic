@@ -7,7 +7,7 @@ name: "Chromatic"
 on:
   pull_request:
     paths-ignore:
-      - storybook-chromatic/src/**
+      - src/**
 
 # List of jobs
 jobs:
