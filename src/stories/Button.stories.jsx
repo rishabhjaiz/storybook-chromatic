@@ -10,6 +10,10 @@ export default {
   argTypes: {
     backgroundColor: { control: "color" },
   },
+  parameters: {
+    // disables Chromatic's snapshotting on a story level
+    chromatic: { disableSnapshot: true },
+  },
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
@@ -21,10 +25,7 @@ Primary.args = {
   primary: true,
   label: "Button",
 };
-Primary.parameters = {
-  // disables Chromatic's snapshotting on a story level
-  chromatic: { disableSnapshot: true },
-};
+
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: "Button",
