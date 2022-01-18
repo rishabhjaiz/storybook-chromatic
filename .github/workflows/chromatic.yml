@@ -8,7 +8,7 @@ on:
   push:
     pull_request:
       paths-ignore:
-        - src/**
+        - storybook-chromatic/src/**
 
 # List of jobs
 jobs:
