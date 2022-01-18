@@ -5,10 +5,9 @@ name: "Chromatic"
 
 # Event for the workflow
 on:
-  push:
-    pull_request:
-      paths-ignore:
-        - storybook-chromatic/src/**
+  pull_request:
+    paths-ignore:
+      - storybook-chromatic/src/**
 
 # List of jobs
 jobs:
