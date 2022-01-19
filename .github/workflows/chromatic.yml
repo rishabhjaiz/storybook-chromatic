@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Dump GitHub context
         run: |
-          echo "${{toJson(github)}}"
+          echo "${{toJson(github.env)}}"
       - uses: actions/checkout@v1
       - name: Install dependencies
         run: yarn
