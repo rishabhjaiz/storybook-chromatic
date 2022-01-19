@@ -6,6 +6,7 @@ name: "Chromatic"
 # Event for the workflow
 on:
   pull_request:
+    types: [ready_for_review]
     paths:
       - src/**
 
