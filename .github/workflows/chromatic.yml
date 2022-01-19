@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Dump GitHub context
         run: |
-          echo "$github_event_path"
+          echo "${github_event_path}"
       - uses: actions/checkout@v1
       - name: Install dependencies
         run: yarn
