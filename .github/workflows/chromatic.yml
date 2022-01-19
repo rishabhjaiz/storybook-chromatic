@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Dump GitHub context
         env:
-          GITHUB_CONTEXT: ${GITHUB_WORKFLOW}
+          GITHUB_CONTEXT: ${github_event_path}
         run: |
           echo "$GITHUB_CONTEXT"
       - uses: actions/checkout@v1
