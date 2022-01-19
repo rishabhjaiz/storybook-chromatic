@@ -18,10 +18,8 @@ jobs:
     # Job steps
     steps:
       - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{env.DAY_OF_WEEK}}
         run: |
-          echo "$GITHUB_CONTEXT"
+          echo "$github_event_path"
       - uses: actions/checkout@v1
       - name: Install dependencies
         run: yarn
