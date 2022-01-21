@@ -5,8 +5,9 @@ name: "Chromatic"
 
 # Event for the workflow
 on:
-  push:
-    paths-ignore:
+  pull_request:
+    types: [synchronize]
+    paths:
       - src/**
 
 # List of jobs
@@ -16,6 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     steps:
+      - name: Dump GitHub context
+        run: |
+          echo "${{toJson(github.event)}}"
       - uses: actions/checkout@v1
       - name: Install dependencies
         run: yarn
